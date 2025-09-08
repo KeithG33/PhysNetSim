@@ -62,12 +62,10 @@ class Animator:
         self._artists: Optional[Sequence] = None
 
     def _init(self):
-        # If blitting, init_func must return the artists to redraw. :contentReference[oaicite:3]{index=3}
         self._artists = tuple(self.problem.init_draw(self.ax))
         return self._artists
 
     def _update(self, _k):
-        # advance physics several small steps before a single draw
         for _ in range(self.steps_per_frame):
             self.engine.step()
         return tuple(self.problem.update_draw(self._artists))
