@@ -1,0 +1,16 @@
+[project]
+name = "physnetsim"
+version = "0.0.1"
+description = "Physics + simulation + neural nets: ODE/PDE solvers, RK4, visualizers"
+authors = [
+  { name = "Keith Gordon", email = "keith.gordon9@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/KeithG33/PhysNetSim"
+
+[tool.setuptools.packages.find]
+include = ["physnetsim*"]
